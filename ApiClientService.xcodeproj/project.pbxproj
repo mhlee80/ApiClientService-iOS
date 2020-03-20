@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,14 @@
 		822CC6B62424817200A29680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822CC6B42424817200A29680 /* Main.storyboard */; };
 		822CC6B82424817500A29680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 822CC6B72424817500A29680 /* Assets.xcassets */; };
 		822CC6BB2424817500A29680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822CC6B92424817500A29680 /* LaunchScreen.storyboard */; };
+		822CC6C4242482FB00A29680 /* ApiClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822CC6C3242482FB00A29680 /* ApiClientService.swift */; };
+		9A855F6C4BC12E7C9A27E01D /* Pods_ApiClientService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388F691768657E1EC9554912 /* Pods_ApiClientService.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F3883B435A8E432B0669FE3 /* Pods-ApiClientService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiClientService.debug.xcconfig"; path = "Target Support Files/Pods-ApiClientService/Pods-ApiClientService.debug.xcconfig"; sourceTree = "<group>"; };
+		388F691768657E1EC9554912 /* Pods_ApiClientService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiClientService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43B4DAEF704C439B2166002F /* Pods-ApiClientService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiClientService.release.xcconfig"; path = "Target Support Files/Pods-ApiClientService/Pods-ApiClientService.release.xcconfig"; sourceTree = "<group>"; };
 		822CC6AB2424817200A29680 /* ApiClientService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiClientService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		822CC6AE2424817200A29680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		822CC6B02424817200A29680 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		822CC6B72424817500A29680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		822CC6BA2424817500A29680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		822CC6BC2424817500A29680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		822CC6C3242482FB00A29680 /* ApiClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A855F6C4BC12E7C9A27E01D /* Pods_ApiClientService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36DADF520ED85A5B9D667FC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F3883B435A8E432B0669FE3 /* Pods-ApiClientService.debug.xcconfig */,
+				43B4DAEF704C439B2166002F /* Pods-ApiClientService.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		822CC6A22424817200A29680 = {
 			isa = PBXGroup;
 			children = (
+				822CC6C22424827E00A29680 /* Libraries */,
 				822CC6AD2424817200A29680 /* ApiClientService */,
 				822CC6AC2424817200A29680 /* Products */,
+				36DADF520ED85A5B9D667FC3 /* Pods */,
+				C94FE66AB5C44A5910DF19D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +86,22 @@
 			path = ApiClientService;
 			sourceTree = "<group>";
 		};
+		822CC6C22424827E00A29680 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				822CC6C3242482FB00A29680 /* ApiClientService.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		C94FE66AB5C44A5910DF19D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				388F691768657E1EC9554912 /* Pods_ApiClientService.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 822CC6BF2424817500A29680 /* Build configuration list for PBXNativeTarget "ApiClientService" */;
 			buildPhases = (
+				DF3045AD15BA7DAF9AA6856B /* [CP] Check Pods Manifest.lock */,
 				822CC6A72424817200A29680 /* Sources */,
 				822CC6A82424817200A29680 /* Frameworks */,
 				822CC6A92424817200A29680 /* Resources */,
+				00F7764B2A2DAE12049682BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +170,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00F7764B2A2DAE12049682BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApiClientService/Pods-ApiClientService-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApiClientService/Pods-ApiClientService-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApiClientService/Pods-ApiClientService-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF3045AD15BA7DAF9AA6856B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApiClientService-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		822CC6A72424817200A29680 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +220,7 @@
 				822CC6B32424817200A29680 /* ViewController.swift in Sources */,
 				822CC6AF2424817200A29680 /* AppDelegate.swift in Sources */,
 				822CC6B12424817200A29680 /* SceneDelegate.swift in Sources */,
+				822CC6C4242482FB00A29680 /* ApiClientService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,11 +362,13 @@
 		};
 		822CC6C02424817500A29680 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F3883B435A8E432B0669FE3 /* Pods-ApiClientService.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DV97Z43DCT;
 				INFOPLIST_FILE = ApiClientService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +382,13 @@
 		};
 		822CC6C12424817500A29680 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43B4DAEF704C439B2166002F /* Pods-ApiClientService.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DV97Z43DCT;
 				INFOPLIST_FILE = ApiClientService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

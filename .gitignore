@@ -1,0 +1,6 @@
+xcuserdata/
+Pods/
+.DS_Store
+ApiClientService.app.dSYM.zip
+ApiClientService.ipa
+ApiClientService.xcodeproj/xcuserdata/
