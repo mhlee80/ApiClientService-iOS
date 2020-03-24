@@ -26,8 +26,9 @@ struct ApiClientError: Error {
 }
 
 class ApiClientService: NSObject {
-  class Get<T: Mappable> {
+  class Request<T: Mappable> {
     static func create(_ url: URLConvertible,
+                       method: HTTPMethod = .get,
                        parameters: Parameters? = nil,
                        encoding: ParameterEncoding = URLEncoding.default,
                        headers: HTTPHeaders? = nil) -> Observable<T> {
