@@ -28,13 +28,16 @@ struct ApiClientError: Error {
 class ApiClientService: NSObject {
   class Get<T: Mappable> {
     static func create(_ url: URLConvertible,
+                       parameters: Parameters? = nil,
                        encoding: ParameterEncoding = URLEncoding.default,
                        headers: HTTPHeaders? = nil) -> Observable<T> {
       return Observable<T>.create { observer -> Disposable in
         Alamofire
           .request(url,
                    method: .get,
-                   encoding: JSONEncoding.default)
+                   parameters: parameters,
+                   encoding: encoding,
+                   headers: headers)
           .validate()
           .responseObject { (response: DataResponse<T>) in
             if let result = response.result.value {
