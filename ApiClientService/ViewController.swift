@@ -57,7 +57,7 @@ class ViewController: UIViewController {
     }
     
     helloWorldButton.rx.tap.flatMap {
-      ApiClientService.Request<HelloWorld>.create("https://helloworld-api-v1.dev.playground.wiwa.io/hello")
+      ApiClientService.RxRequest<HelloWorld>.create("https://helloworld-api-v1.dev.playground.wiwa.io/hello")
     }.subscribe(onNext: { helloWorld in
       log.info("\(helloWorld.message)")
     }, onError: { error in

@@ -26,7 +26,7 @@ struct ApiClientError: Error {
 }
 
 class ApiClientService: NSObject {
-  class Request<T: Mappable> {
+  class RxRequest<T: Mappable> {
     static func create(_ url: URLConvertible,
                        method: HTTPMethod = .get,
                        parameters: Parameters? = nil,
@@ -52,6 +52,22 @@ class ApiClientService: NSObject {
         }
         return Disposables.create()
       }
+    }
+  }
+  
+  class Request {
+    static func create(_ url: URLConvertible,
+                       method: HTTPMethod = .get,
+                       parameters: Parameters? = nil,
+                       encoding: ParameterEncoding = URLEncoding.default,
+                       headers: HTTPHeaders? = nil) -> URLRequest? {
+      return Alamofire
+        .request(url,
+                 method: .get,
+                 parameters: parameters,
+                 encoding: encoding,
+                 headers: headers)
+        .request
     }
   }
 }
